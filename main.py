@@ -31,7 +31,7 @@ time_now = datetime.now()
 hour_now = time_now.hour
 
 
-def is_iss_on_me():
+def is_iss():
     if MY_LAT - 5 < iss_latitude > MY_LAT + 5 and iss_longitude == MY_LONG:
         return True
     else:
@@ -44,10 +44,11 @@ def is_night():
     else:
         return False
 
-print(is_iss_on_me())
+
+print(is_iss())
 print(is_night())
 
-if is_iss_on_me() and is_night():
+if is_iss() and is_night():
     print('HEADS UP!')
 
 # Your position is within +5 or -5 degrees of the ISS position.
