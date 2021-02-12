@@ -49,7 +49,7 @@ print(is_iss())
 print(is_night())
 
 if is_iss() and is_night():
-    print('HEADS UP!')
+    print('LOOK UP!')
 
 # Your position is within +5 or -5 degrees of the ISS position.
 
