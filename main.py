@@ -32,14 +32,14 @@ hour_now = time_now.hour
 
 
 def is_iss():
-    if MY_LAT - 5 < iss_latitude > MY_LAT + 5 and iss_longitude == MY_LONG:
+    if MY_LAT - 5 < iss_latitude < MY_LAT + 5 and iss_longitude == MY_LONG:
         return True
     else:
         return False
 
 
 def is_night():
-    if sunrise < hour_now > sunset:
+    if sunrise > hour_now > sunset:
         return True
     else:
         return False
