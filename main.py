@@ -1,7 +1,10 @@
 import requests
 from datetime import datetime
+import time
 
 # ----------------------------- ISS --------------------------
+
+# https://www.latlong.net/
 
 MY_LAT = 50.447731  # Kyiv
 MY_LONG = 30.542721
@@ -44,12 +47,15 @@ def is_night():
     else:
         return False
 
+while True:
 
-print(is_iss())
-print(is_night())
+    print(is_iss())
+    print(is_night())
 
-if is_iss() and is_night():
-    print('LOOK UP!')
+    if is_iss() and is_night():
+        print('LOOK UP!')
+    time.sleep(60)
+
 
 # Your position is within +5 or -5 degrees of the ISS position.
 
